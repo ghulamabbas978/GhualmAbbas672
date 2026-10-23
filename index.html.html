@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ghulam Abbas — BS IT student, social media manager, and digital marketing enthusiast from Muzaffargarh, Punjab, Pakistan.">
+  <title>Ghulam Abbas | Portfolio</title>
+  <style>
+    :root {
+      --bg: #08111f; --panel: #101d30; --panel2: #14243a; --text: #edf4ff;
+      --muted: #aab9ce; --accent: #63e6be; --accent2: #72a7ff; --line: rgba(255,255,255,.11);
+      --shadow: 0 22px 60px rgba(0,0,0,.25);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; background: radial-gradient(circle at 85% 5%, #173b54 0, transparent 30%), var(--bg); color: var(--text); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 91%); margin: auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(8,17,31,.82); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+    nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 850; letter-spacing: -.04em; font-size: 1.25rem; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 25px; color: var(--muted); font-size: .92rem; }
+    .nav-links a:hover { color: var(--accent); }
+    .menu-btn { display: none; border: 1px solid var(--line); background: var(--panel); color: var(--text); padding: 8px 12px; border-radius: 10px; }
+    .hero { padding: 92px 0 75px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 55px; align-items: center; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; font-weight: 800; }
+    h1 { font-size: clamp(2.8rem, 7vw, 5.3rem); line-height: 1.03; letter-spacing: -.065em; margin: 18px 0 22px; }
+    h1 span { background: linear-gradient(100deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .intro { max-width: 650px; color: var(--muted); font-size: 1.08rem; }
+    .actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 12px 19px; border-radius: 12px; font-weight: 750; border: 1px solid var(--line); transition: transform .2s, background .2s; cursor: pointer; }
+    .btn:hover { transform: translateY(-3px); }
+    .primary { background: var(--accent); color: #062018; border-color: transparent; }
+    .secondary { background: rgba(255,255,255,.04); }
+    .profile-card { background: linear-gradient(145deg, rgba(99,230,190,.12), rgba(114,167,255,.1)), var(--panel); border: 1px solid var(--line); padding: 30px; border-radius: 28px; box-shadow: var(--shadow); text-align: center; }
+    .avatar { width: 132px; height: 132px; margin: 0 auto 18px; border-radius: 35px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #08111f; font-size: 2.6rem; font-weight: 900; box-shadow: 0 12px 40px rgba(99,230,190,.18); }
+    .profile-card h2 { font-size: 1.35rem; }
+    .profile-card p { color: var(--muted); font-size: .92rem; }
+    .status { display: inline-flex; align-items: center; gap: 8px; margin-top: 17px; background: rgba(99,230,190,.1); color: var(--accent); padding: 7px 11px; border-radius: 99px; font-size: .8rem; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    section { padding: 64px 0; }
+    .section-head { margin-bottom: 28px; }
+    .section-head h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); letter-spacing: -.04em; margin-top: 8px; }
+    .section-head p { color: var(--muted); margin-top: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: rgba(16,29,48,.84); border: 1px solid var(--line); padding: 24px; border-radius: 20px; transition: transform .22s, border-color .22s; }
+    .card:hover { transform: translateY(-5px); border-color: rgba(99,230,190,.45); }
+    .icon { width: 43px; height: 43px; display: grid; place-items: center; background: rgba(99,230,190,.1); border-radius: 13px; font-size: 1.25rem; margin-bottom: 17px; }
+    .card h3 { margin-bottom: 8px; font-size: 1.1rem; }
+    .card p, .muted { color: var(--muted); font-size: .95rem; }
+    .edu-list { display: grid; gap: 15px; }
+    .edu { display: grid; grid-template-columns: 145px 1fr; gap: 20px; padding: 22px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
+    .year { color: var(--accent); font-weight: 800; }
+    .edu h3 { margin-bottom: 4px; }
+    .score { color: var(--accent); font-weight: 800; margin-top: 7px; }
+    .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 25px; }
+    .stat { background: var(--panel2); padding: 20px; border-radius: 16px; border: 1px solid var(--line); }
+    .stat strong { display: block; font-size: 1.6rem; color: var(--accent); }
+    .stat span { color: var(--muted); font-size: .85rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill { padding: 9px 13px; border-radius: 10px; background: rgba(114,167,255,.1); border: 1px solid rgba(114,167,255,.18); color: #d5e5ff; font-size: .9rem; }
+    .contact-box { background: linear-gradient(120deg, rgba(99,230,190,.12), rgba(114,167,255,.12)); border: 1px solid var(--line); border-radius: 25px; padding: clamp(25px, 5vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .contact-box h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.2; }
+    .contact-box p { color: var(--muted); margin-top: 10px; }
+    footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 780px) {
+      .hero { grid-template-columns: 1fr; padding-top: 65px; gap: 35px; }
+      .profile-card { max-width: 430px; }
+      .grid { grid-template-columns: 1fr; }
+      .edu { grid-template-columns: 1fr; gap: 5px; }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 20px 5%; background: #0b1728; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
+      .nav-links.open { display: flex; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#home">GA<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="reveal">
+        <p class="eyebrow">Student • Digital Creator • Social Media</p>
+        <h1>Hi, I'm<br><span>Ghulam Abbas.</span></h1>
+        <p class="intro">I'm a BS Information Technology student at Emerson University Multan, currently in my 7th semester with a 3.62 CGPA. I’m interested in social media management, digital marketing, technology, and building useful digital experiences.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Let's Connect ↗</a>
+          <a class="btn secondary" href="#education">View Education ↓</a>
+        </div>
+      </div>
+      <aside class="profile-card reveal">
+        <div class="avatar" aria-label="Ghulam Abbas initials">GA</div>
+        <h2>Ghulam Abbas</h2>
+        <p>BS Information Technology</p>
+        <p>Muzaffargarh, Punjab, Pakistan</p>
+        <div class="status"><span class="dot"></span> Open to learning & opportunities</div>
+      </aside>
+    </section>
+
+    <section class="container reveal" id="about">
+      <div class="section-head"><p class="eyebrow">A little about me</p><h2>Curious mind. Digital mindset.</h2><p>I enjoy learning new skills, exploring technology, and helping brands communicate clearly online.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">🎓</div><h3>IT Student</h3><p>Studying Information Technology and developing my understanding of software, systems, and cybersecurity concepts.</p></article>
+        <article class="card"><div class="icon">📱</div><h3>Social Media Management</h3><p>Interested in content planning, audience engagement, brand presence, and social media growth.</p></article>
+        <article class="card"><div class="icon">🚀</div><h3>Always Improving</h3><p>Focused on improving my communication, technical knowledge, and practical digital skills through projects and practice.</p></article>
+      </div>
+    </section>
+
+    <section class="container reveal" id="education">
+      <div class="section-head"><p class="eyebrow">Academic journey</p><h2>Education</h2><p>My academic background and current university progress.</p></div>
+      <div class="edu-list">
+        <article class="edu"><div class="year">2023 – Present</div><div><h3>BS Information Technology</h3><p class="muted">Emerson University Multan, Pakistan</p><p>Currently studying in the 7th semester.</p><p class="score">Current CGPA: 3.62</p></div></article>
+        <article class="edu"><div class="year">Intermediate</div><div><h3>ICS — Intermediate in Computer Science</h3><p class="muted">BISE Dera Ghazi Khan</p><p class="score">780 / 1100 marks</p></div></article>
+        <article class="edu"><div class="year">2018 – 2020</div><div><h3>Matriculation — Science</h3><p class="muted">BISE Dera Ghazi Khan</p><p class="score">978 / 1100 marks</p></div></article>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>3.62</strong><span>Current CGPA</span></div>
+        <div class="stat"><strong>7th</strong><span>BS IT Semester</span></div>
+        <div class="stat"><strong>20</strong><span>Years old</span></div>
+      </div>
+    </section>
+
+    <section class="container reveal" id="skills">
+      <div class="section-head"><p class="eyebrow">What I'm building</p><h2>Skills & interests</h2><p>A growing set of skills I’m learning and applying.</p></div>
+      <div class="skills">
+        <span class="skill">Social Media Management</span><span class="skill">Digital Marketing</span><span class="skill">Content Planning</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">Information Technology</span><span class="skill">Cybersecurity Fundamentals</span><span class="skill">Communication</span><span class="skill">Problem Solving</span>
+      </div>
+      <p class="muted" style="margin-top:17px">Note: This portfolio lists areas of interest and learning; add only skills you can confidently demonstrate.</p>
+    </section>
+
+    <section class="container reveal" id="contact">
+      <div class="contact-box">
+        <div><p class="eyebrow">Get in touch</p><h2>Let's create something<br>worth sharing.</h2><p>For collaborations, digital marketing, or professional opportunities, feel free to contact me.</p><p style="margin-top:12px">✉️ <a href="mailto:gamarketing77@gmail.com">gamarketing77@gmail.com</a></p></div>
+        <div class="actions">
+          <a class="btn primary" id="whatsappBtn" href="https://wa.me/?text=Hello%20Ghulam%20Abbas%2C%20I%20visited%20your%20portfolio." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+          <a class="btn secondary" href="mailto:gamarketing77@gmail.com">Send Email ↗</a>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:13px;font-size:.82rem">WhatsApp note: This button opens WhatsApp with a ready message. To send visitors directly to your chat, replace the link in the code with https://wa.me/92XXXXXXXXXX using your own number (country code, no + or spaces).</p>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><span>© <span id="year"></span> Ghulam Abbas. All rights reserved.</span><span>Designed with purpose ✦</span></div></footer>
+
+  <script>
+    // Mobile navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Reveal sections as they enter the screen
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+
+    // Automatically update the footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
